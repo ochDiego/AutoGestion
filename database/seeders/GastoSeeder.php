@@ -14,6 +14,9 @@ class GastoSeeder extends Seeder
      */
     public function run(): void
     {
+
+        \App\Models\Pago::factory(12)->create();
+
         $gastos = Gasto::factory(15)->has(Pago::factory())->create();
 
         foreach ($gastos as $gasto) {

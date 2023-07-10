@@ -20,7 +20,7 @@ return new class extends Migration
             $table->tinyInteger('fijo');
 
             $table->unsignedBigInteger('categoria_id');
-            $table->unsignedBigInteger('pago_id')->unique();
+            $table->unsignedBigInteger('pago_id')->unique()->nullable();
             $table->unsignedBigInteger('perfile_id');
 
             $table->foreign('categoria_id')->references('id')->on('categorias')
